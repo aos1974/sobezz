@@ -1,0 +1,7 @@
+http://python-3.ru/page/imap-email-python
+
+https://docs.python.org/3/library/imaplib.html#imap4-example
+
+https://stackoverflow.com/questions/19001266/how-to-search-specific-e-mail-using-python-imaplib-imap4-search
+
+https://digitology.tech/docs/python_3/library/email.mime.html
