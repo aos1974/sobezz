@@ -28,16 +28,16 @@ class Stack(object):
     # удаляет верхний элемент стека. Стек изменяется. Метод возвращает верхний элемент стека или None
     def pop(self) -> Any:
         # если Стек пустой - возвращаем None
-        if self.isEmpty:
+        if self.isEmpty():
             return None
-        return self.elements.pop(self.size-1)
+        return self.elements.pop(self.size()-1)
     
     # возвращает верхний элемент стека, но не удаляет его. Стек не меняется.
     def peek(self) -> Any:
         # если Стек пустой - возвращаем None
-        if self.isEmpty:
+        if self.isEmpty():
             return None
-        return self.elements[self.size-1]
+        return self.elements[self.size()-1]
     
     # возвращает количество элементов в стеке
     def size(self) -> int:

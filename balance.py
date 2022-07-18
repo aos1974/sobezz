@@ -47,14 +47,13 @@ def same_brackets(openb : str, closeb : str) -> bool:
 
 # Главная функция программы
 def main():
-    
-    answer = NOT_BALLANCED
+
     
     stack = Stack()
     brackets = list(str(input("Введите последовательность скобок: ")).strip())
     
     if len(brackets) == 0:
-        return answer
+        return NOT_BALLANCED
     
     for bracket in brackets:
         if is_baracket(bracket):
@@ -62,13 +61,15 @@ def main():
                 stack.push(bracket)
             else:
                 if stack.isEmpty():
-                    return answer
+                    return NOT_BALLANCED
                 if same_brackets(stack.peek(), bracket):
                     stack.pop()
                 else:
-                    return answer
-    
-    return answer
+                    return NOT_BALLANCED
+    if stack.isEmpty():
+        return BALLANCED
+    else:
+        return NOT_BALLANCED
 # end main()
 
 # Основная программа
